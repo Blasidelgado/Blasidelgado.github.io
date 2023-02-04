@@ -1,0 +1,323 @@
+/* Font imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+/* General styling */
+
+:root {
+    --primary-color: #25a5be;
+    --icons-color: #2596be;
+    --primary-purple: #a696d4;
+    --secondary-purple: #3b087c;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: black;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 55%;
+}
+
+h1, h2, .subtitle {
+    text-transform: uppercase;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* Header */ 
+
+#introduction {
+    font-size: 16px;
+    padding: 3rem 2rem 2rem 2rem;
+}
+
+.img-wrapper {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+}
+
+#presentation {
+    width: 75%;
+    justify-content: center;
+}
+
+#name {
+    line-height: 1.1;
+    font-size: 4em;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    font-size: 1.6em;
+    font-weight: 700;
+    word-spacing: 0.5em;
+    letter-spacing: 0.25em;
+}
+
+#description {
+    font-size: 1.3em;
+}
+
+
+/* Main */
+
+#primary-info {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    float: right;
+    font-size: 12px;
+}
+
+.title {
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 1rem;
+    background-color: var(--primary-color);
+}
+
+h2 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 900;
+    word-spacing: 0.5rem;
+    letter-spacing: 0.1rem;
+    margin: 0;
+}
+
+.topic {
+    margin: 1.6em 0;
+}
+
+.topic > * {
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+    margin: 0;
+}
+
+.more-info {
+    font-size: 1.4em;
+    font-style: italic;
+    margin: 0.3em 0;
+}
+
+.aditional-info {
+    padding: 0;
+}
+
+.aditional-info li {
+    font-size: 1.4em;
+    word-spacing: initial;
+    letter-spacing: initial;
+}
+
+.aditional-info li::before {
+    content: "-";
+    margin-right: 0.5em;
+}
+
+/* Hobbies */ 
+
+.icons-wrapper {
+    width: 100%;
+    position: relative;
+    min-height: 3.5rem;
+    overflow: hidden;
+}
+
+svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--icons-color);
+    left: 100%;
+    position: absolute;
+    transform: translateX(100%);
+}
+
+#hobbies-description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.hobbie {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--primary-purple);
+    padding: 0.5em 1em;
+}
+
+.slide-in1 {
+    animation: slide-in-first 4s ease-in-out forwards;
+}
+
+.slide-in2 {
+    animation: slide-in-second 4.5s ease-in-out forwards;
+}
+
+.slide-in3 {
+    animation: slide-in-third 5s ease-in-out forwards;
+}
+
+.slide-in4 {
+    animation: slide-in-fourth 5.5s ease-in-out forwards;
+}
+
+@keyframes slide-in-first {
+    0% {
+        transform: translate(100%, 6%) scale(1.3);
+    }
+    100% {
+        left: 20%;
+        transform: translate(-50%, 6%) scale(1.3);
+    }
+}
+
+@keyframes slide-in-second {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        left: 40%;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-in-third {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        left: 60%;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-in-fourth {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        left: 80%;
+        transform: translateX(0%);
+    }
+}
+
+/* Aside */
+
+#secondary-info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-size: 12px;
+}
+
+.left-wrapper {
+    margin-left: 1.5em;
+}
+
+#secondary-info .topic {
+    font-size: 1.5em;
+}
+
+#personal-contact {
+    min-height: 100px;
+}
+
+#social-media {
+    font-size: 0.7em;
+}
+
+.sm-list {
+    margin-top: 0.5em;
+}
+
+/* Progress Bars */
+
+.progress {
+    width: 75%;
+    height: 0.6rem;
+    margin-bottom: 1em;
+    background-color: var(--primary-purple);
+}
+
+.progress-bar {
+    width: 0%;
+    background-color: var(--secondary-purple);
+    transition: width 2s ease-in-out;
+}
+
+.progress-bar.width-100 {
+    width: 100%
+}
+
+.progress-bar.width-80 {
+    width: 80%
+}
+.progress-bar.width-60 {
+    width: 60%
+}
+
+/* Skills Section */
+
+#soft-skills i {
+    font-size: 1em;
+    color: green;
+}
+
+/* Media Queries */ 
+
+@media screen and (max-width: 991px) {
+    #introduction {
+        font-size: 12px;
+    }
+    #presentation.responsive {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+    }
+    #profile-image {
+        max-width: 200px;
+    }
+    #name, #position {
+        text-align: center;
+        align-self: center;
+    }
+
+    /* Main */ 
+    #primary-info, #secondary-info {
+        width: 100%;
+        padding: 1em;
+    }
+}
