@@ -318,6 +318,8 @@ svg {
     /* Main */ 
     #primary-info, #secondary-info {
         width: 100%;
+    }
+    .topic {
         padding: 1em;
     }
 }
