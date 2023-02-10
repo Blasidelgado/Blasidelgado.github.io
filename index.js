@@ -14,13 +14,12 @@ let animationThreshold = {
 
 const barsObserver = new IntersectionObserver( entries => {
     entries.forEach( entry => {
-        console.log("Intersection ratio:", entry.intersectionRatio)
         if (entry.isIntersecting) {
             if (entry.target.id === 'adobe-photoshop') {
             entry.target.classList.add('width-100')
             }   else if (entry.target.id === 'html' || entry.target.id === 'css') {
                 entry.target.classList.add('width-80')
-            } else if (entry.target.id === 'javascript' || entry.target.id === 'react') {
+            }   else if (entry.target.id === 'javascript' || entry.target.id === 'react') {
                 entry.target.classList.add('width-60')
             }
         }
@@ -29,7 +28,6 @@ const barsObserver = new IntersectionObserver( entries => {
 
 const iconsObserver = new IntersectionObserver( entries => {
     entries.forEach( entry => {
-        console.log("Intersection ratio:", entry.intersectionRatio)
         if (entry.isIntersecting) {
                 firstAnimated.classList.add('slide-in1')
                 secondAnimated.classList.add('slide-in2')
@@ -47,16 +45,15 @@ window.onload = () => {
 }
 
 async function fetchData() {
+    
     // Fetch Data //
     try {
         const req = await fetch('https://randomuser.me/api/?inc=picture,cell,name,location,email');
-        console.log(req)    
         const {results} = await req.json()
-        console.log(results)
         const [newPerson] = results
         const {name, location, email, cell: phone, picture: {large: profilePicture}} = newPerson
-        console.log(location)
-    // Fill Required Data //
+    
+        // Fill Required Data //
         document.getElementById('profile-image').setAttribute('src', profilePicture)
         document.getElementById('name').innerText = name.first + ' ' + name.last
         document.getElementById('city').innerText = location.city + ', ' + location.state
@@ -72,7 +69,3 @@ async function fetchData() {
         console.log(`There is an error fetching data: ${error}`)
     }
 }
-
-
-
-

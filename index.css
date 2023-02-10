@@ -301,21 +301,20 @@ svg {
 @media screen and (max-width: 991px) {
     #introduction {
         font-size: 12px;
+        min-height: 500px;
     }
     #presentation.responsive {
         width: 100%;
         margin: 0;
         margin-top: 1rem;
+        align-items: center;
     }
     #profile-image {
         max-width: 200px;
     }
     #name, #position {
         text-align: center;
-        align-self: center;
-    }
-
-    /* Main */ 
+    }    /* Main */ 
     #primary-info, #secondary-info {
         width: 100%;
     }
