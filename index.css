@@ -179,7 +179,7 @@ svg {
 }
 
 .slide-in1 {
-    animation: slide-in-first 4s ease-in-out forwards;
+    animation: slide-in-first 3s ease-in-out forwards;
 }
 
 .slide-in2 {
@@ -235,7 +235,6 @@ svg {
 }
 
 /* Aside */
-
 #secondary-info {
     display: flex;
     flex-direction: column;
